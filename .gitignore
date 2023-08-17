@@ -1,11 +1,31 @@
+# LaTeX build files
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.gz
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.synctex(busy)
+*.xdv
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+
+# Compiled files
+*.pdf
+*.dvi
+
+# IDE/Editor specific files
+.vscode/
 /bsu_beamer_style.code-workspace
-/template.aux
-/template.fdb_latexmk
-/template.fls
-/template.log
-/template.nav
-/template.out
-/template.pdf
-/template.snm
-/template.synctex.gz
-/template.toc
+
+# Temporary files
+*~
