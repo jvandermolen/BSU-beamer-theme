@@ -19,9 +19,8 @@
 *.snm
 *.vrb
 
-# Compiled files
-*.pdf
-*.dvi
+# Compiled template
+template.pdf
 
 # IDE/Editor specific files
 .vscode/
