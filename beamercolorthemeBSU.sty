@@ -8,147 +8,22 @@
 % 1. under the LaTeX Project Public License and/or
 % 2. under GPLv3.
 
-
 \mode<presentation>
-
-\definecolor{mrcbrown1}{RGB}{138,121,103}
-\colorlet{mrcbrown2}{mrcbrown1!60}
-\colorlet{mrcbrown3}{mrcbrown1!20}
-%\definecolor{mrcbrown2}{RGB}{185,175,164}
-%\definecolor{mrcbrown3}{RGB}{220,215,209}
-
-\definecolor{mrcred1}{RGB}{130,47,90}
-\colorlet{mrcred2}{mrcred1!60}
-\colorlet{mrcred3}{mrcred1!20}
-%\definecolor{mrcred2}{RGB}{196,102,155}
-%\definecolor{mrcred3}{RGB}{225,178,205}
-
-
-\definecolor{mrcpurple1}{RGB}{106,59,119}
-\colorlet{mrcpurple2}{mrcpurple1!60}
-\colorlet{mrcpurple3}{mrcpurple1!20}
-
-%\definecolor{mrcpurple2}{HTML}{ae77b2}
-%\definecolor{mrcpurple3}{HTML}{d6bbd8}
-
-
-\definecolor{mrcorange1}{RGB}{208,114,50}
-\colorlet{mrcorange2}{mrcorange1!60}
-\colorlet{mrcorange3}{mrcorange1!20}
-%\definecolor{mrcorange2}{HTML}{F9b37d}
-%\definecolor{mrcorange3}{HTML}{Fcd9bd}
-
-\definecolor{mrcblue1}{RGB}{33,103,126}
-\colorlet{mrcblue2}{mrcblue1!60}
-\colorlet{mrcblue3}{mrcblue1!20}
-%\definecolor{mrcblue2}{HTML}{66aabc}
-%\definecolor{mrcblue3}{HTML}{b2d4dd}
 
 \definecolor{mrcdarkblue}{RGB}{46,45,98}
 \definecolor{mrclightblue}{RGB}{0,190,213}
 \definecolor{mrcgray}{RGB}{98,98,98}
 \definecolor{mrcred}{RGB}{233,77,54}
 
-\definecolor{mrcgreen1}{RGB}{181,211,52}
-\colorlet{mrcgreen2}{mrcgreen1!60}
-\colorlet{mrcgreen3}{mrcgreen1!20}
-%\definecolor{mrcgreen2}{HTML}{c5ca73}
-%\definecolor{mrcgreen3}{HTML}{e2e4b8}
-
-\definecolor{mrcyellow1}{RGB}{255,219,0}
-%\definecolor{mrcyellow2}{HTML}{F6d170}
-%\definecolor{mrcyellow3}{HTML}{Fae8b7}
-
-
-\colorlet{alert1}{mrcred1}
-\colorlet{alert2}{mrcred2}
-\colorlet{alert3}{mrcred3}
-
-\colorlet{example1}{mrcblue1}
-\colorlet{example2}{mrcblue2}
-\colorlet{example3}{mrcblue3}
-
-
-\def\beamer@BSU@truetext{green}%
-\ifx\beamer@BSU@colortheme\beamer@BSU@truetext%
-\colorlet{main1}{mrcgreen1}
-\colorlet{main2}{mrcgreen2}
-\colorlet{main3}{mrcgreen3}
-\else
-\def\beamer@BSU@truetext{blue}%
-\ifx\beamer@BSU@colortheme\beamer@BSU@truetext%
-\colorlet{main1}{mrcblue1}
-\colorlet{main2}{mrcblue2}
-\colorlet{main3}{mrcblue3}
-\colorlet{example1}{mrcpurple1}
-\colorlet{example2}{mrcpurple2}
-\colorlet{example3}{mrcpurple3}
-\colorlet{alert1}{mrcorange1}
-\colorlet{alert2}{mrcorange2}
-\colorlet{alert3}{mrcorange3}
-\else
-\def\beamer@BSU@truetext{red}%
-\ifx\beamer@BSU@colortheme\beamer@BSU@truetext%
-\colorlet{main1}{mrcred1}
-\colorlet{main2}{mrcred2}
-\colorlet{main3}{mrcred3}
-\colorlet{alert1}{mrcorange1}
-\colorlet{alert2}{mrcorange2}
-\colorlet{alert3}{mrcorange3}
-\colorlet{example1}{mrcorange1}
-%\colorlet{example2}{mrcyellow2}
-%\colorlet{example3}{mrcyellow3}
-\else
-\def\beamer@BSU@truetext{yellow}%
-\ifx\beamer@BSU@colortheme\beamer@BSU@truetext%
-\colorlet{main1}{mrcyellow1}
-\colorlet{main2}{mrcblue3}
-\colorlet{main3}{mrcblue2}
-\colorlet{example1}{mrcbrown1}
-\colorlet{example2}{mrcbrown2}
-\colorlet{example3}{mrcbrown3}
-\colorlet{alert1}{mrcorange1}
-\colorlet{alert2}{mrcorange2}
-\colorlet{alert3}{mrcorange3}
-\else
-\def\beamer@BSU@truetext{purple}%
-\ifx\beamer@BSU@colortheme\beamer@BSU@truetext%
-\colorlet{main1}{mrcpurple1}
-\colorlet{main2}{mrcpurple2}
-\colorlet{main3}{mrcpurple3}
-\else
-\def\beamer@BSU@truetext{orange}%
-\ifx\beamer@BSU@colortheme\beamer@BSU@truetext%
-\colorlet{main1}{mrcorange1}
-\colorlet{main2}{mrcorange2}
-\colorlet{main3}{mrcorange3}
-\colorlet{example1}{mrcorange1}
-%\colorlet{example2}{mrcyellow2}
-%\colorlet{example3}{mrcyellow3}
-\else
-\colorlet{main1}{mrcbrown1}
-\colorlet{main2}{mrcbrown2}
-\colorlet{main3}{mrcbrown3}
-\colorlet{alert1}{mrcred1}
-\colorlet{alert2}{mrcred2}
-\colorlet{alert3}{mrcred3}
-\colorlet{example1}{mrcorange1}
-\colorlet{example2}{mrcorange2}
-\colorlet{example3}{mrcorange3}
-
-\fi\fi\fi\fi\fi\fi
-
-
-
-\setbeamercolor*{palette primary}{fg=white,bg=main2}
-\setbeamercolor*{palette secondary}{fg=white,bg=main3}
-\setbeamercolor*{palette tertiary}{fg=white,bg=main1}
-\setbeamercolor*{palette quaternary}{fg=white,bg=main1}
+\setbeamercolor*{palette primary}{fg=white,bg=mrcdarkblue}
+\setbeamercolor*{palette secondary}{fg=white,bg=mrclightblue}
+\setbeamercolor*{palette tertiary}{fg=white,bg=mrcred}
+\setbeamercolor*{palette quaternary}{fg=white,bg=mrcgray}
 
 \setbeamercolor{title}{fg=mrcdarkblue}
 \setbeamercolor{subtitle}{fg=mrcgray}
-\setbeamercolor*{titlelike}{bg=main3}
-\setbeamercolor*{frametitle}{bg=mrcdarkblue,fg=main1}
+\setbeamercolor*{titlelike}{bg=white}
+\setbeamercolor*{frametitle}{bg=white,fg=mrcdarkblue}
 \setbeamercolor*{frametitleback}{bg=white,fg=white}
 \setbeamercolor*{part title}{bg=black,fg=black}
 \setbeamercolor*{heading}{fg=mrclightblue, bg=white}
@@ -174,24 +49,11 @@
 \setbeamercolor{block title example}{fg=white,bg=mrclightblue}
 \setbeamercolor{block body example}{fg=mrcgray,bg=mrcgray!10}
 
-
 \setbeamercolor{alerted text}{fg=mrcred}
 
-\usepackage{etoolbox}
-
-\definecolor{trueblue}{RGB}{0, 115, 197} 
 \setbeamertemplate{itemize item}[circle]
-
-
-\AtBeginEnvironment{exampleblock}{\setbeamercolor*{item}{fg=example1, bg=example1}}
-\AtBeginEnvironment{exampleblock}{\setbeamercolor*{item projected}{bg=example1}}
-\AtBeginEnvironment{exampleblock}{\setbeamercolor*{subitem}{fg=example1, bg=example1}}
-\AtBeginEnvironment{exampleblock}{\setbeamercolor*{subitem projected}{bg=example1}}
-
-\AtBeginEnvironment{alertblock}{\setbeamercolor*{item}{fg=alert1, bg=alert1}}
-\AtBeginEnvironment{alertblock}{\setbeamercolor*{item projected}{bg=alert1}}
-\AtBeginEnvironment{alertblock}{\setbeamercolor*{subitem}{fg=alert1, bg=alert1}}
-\AtBeginEnvironment{alertblock}{\setbeamercolor*{subitem projected}{bg=alert1}}
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}[circle]
 
 \setbeamercolor*{item}{fg=mrcgray}
 \setbeamercolor*{subitem}{fg=mrcgray}
