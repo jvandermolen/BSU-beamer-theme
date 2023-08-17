@@ -1,0 +1,70 @@
+% Copyright 2023 by Johan van der Molen Moris, 2015 by Paul Kirk
+%
+% Elements of this style file were adapted under the GNU Public License
+% from Marco Barisione's Torino Beamer theme.
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under GPLv3.
+
+\mode<presentation>
+
+% String used between the current page and the total page count.
+\def\beamer@mrc@pageofpages{/}
+\DeclareOptionBeamer{pageofpages}{\def\beamer@mrc@pageofpages{#1}}
+
+\ProcessOptionsBeamer
+
+% Fonts
+\setbeamerfont{frametitle}{size=\fontsize{20}{24}\bfseries, family={\fontfamily{phv}}}
+
+% Colors.
+\setbeamercolor*{page header}{parent=titlelike}
+
+% Lengths
+\newlength{\headerheight}
+\setlength{\headerheight}{.045\paperheight}
+
+\setbeamerfont{page number}{size=\Large}
+
+% Footer.
+\defbeamertemplate*{footline}{mrc theme}
+{
+  \leavevmode%
+
+  \hbox
+  {
+    \begin{beamercolorbox}[wd=0.45\paperwidth,leftskip=0.02\paperwidth,]{white}\includegraphics[height=0.06\paperwidth]{logo.pdf} \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=0.52\paperwidth,ht=3.7ex,dp=2ex]{pages}%
+    \hfill {\usebeamerfont{page number}\insertframenumber{} \beamer@mrc@pageofpages{} \inserttotalframenumber \hspace{3mm}} \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=0.03\paperwidth]{white} \end{beamercolorbox}
+  }
+
+}
+
+% Header
+\defbeamertemplate*{frametitle}{mrc theme}[1][left]
+{
+  \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+  \vbox{}\vskip-.25em%
+  \begin{beamercolorbox}[sep=\beamer@leftmargin,wd=\paperwidth]{frametitleback}
+    \usebeamerfont{frametitle}\usebeamercolor[bg]{framesubtitle}%
+    \vskip-1.2ex
+    \if@tempswa\else\csname beamer@fte#1\endcsname\fi%
+    \strut\insertframetitle\strut\par%
+    \def\beamer@mrc@truetext{true}%
+
+    \vskip-2.4ex%
+    \if@tempswa\else\vskip-\beamer@leftmargin\fi
+  \end{beamercolorbox}% 
+}
+
+% Frame title continuations, default
+\defbeamertemplate*{frametitle continuation}{mrc theme}{(\insertcontinuationcount)}
+
+
+
+
+\mode
+<all>

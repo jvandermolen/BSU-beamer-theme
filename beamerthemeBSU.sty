@@ -1,0 +1,31 @@
+% Copyright 2023 by Johan van der Molen Moris, 2015 by Paul Kirk
+%
+% Elements of this style file were adapted under the GNU Public License
+% from Marco Barisione's Torino Beamer theme.
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under GPLv3.
+
+\mode<presentation>
+\DeclareOptionBeamer{pageofpages}{\PassOptionsToPackage{pageofpages=#1}{beamerouterthemeBSU}}
+
+\ProcessOptionsBeamer
+\newcommand{\backupstart}{
+   \newcounter{framenumbervorappendix}
+   \setcounter{framenumbervorappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumbervorappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumbervorappendix}} 
+}
+\useinnertheme{BSU}
+\useoutertheme{BSU}
+\usecolortheme{BSU}
+
+\setbeamertemplate{navigation symbols}{}
+\usepackage{helvet}
+
+\mode
+<all>

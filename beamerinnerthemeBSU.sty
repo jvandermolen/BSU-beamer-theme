@@ -1,0 +1,87 @@
+% Copyright 2023 by Johan van der Molen Moris, 2015 by Paul Kirk
+%
+% Elements of this style file were adapted under the GNU Public License
+% from Marco Barisione's Torino Beamer theme.
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under GPLv3.
+
+\usepackage{tikz}
+\mode<presentation>
+
+\setbeamerfont{author}{size=\Large, family={\fontfamily{phv}}}
+\setbeamerfont{institute}{size=\normalsize, family={\fontfamily{phv}}}
+\setbeamerfont{title}{size=\fontsize{24}{28}\bfseries, family={\fontfamily{phv}}}
+\setbeamerfont{subtitle}{size=\Large\normalfont, family={\fontfamily{phv}}}
+\setbeamerfont{heading}{size=\Large\bfseries, family={\fontfamily{phv}}}
+
+
+\newlength{\inputwd}
+\newcommand\heading[1]{%
+  \par\bigskip
+  {\usebeamerfont{heading}\usebeamercolor[fg]{heading}#1}
+  \par\smallskip
+}
+
+% Colors.
+
+\setbeamercolor*{title page header}{parent=palette tertiary}
+
+
+% Margins.
+\newlength{\beamer@fancy@normalmargin}
+\setlength{\beamer@fancy@normalmargin}{.06\paperwidth}
+\setbeamersize{text margin left=\beamer@fancy@normalmargin}
+\setbeamersize{text margin right=\beamer@fancy@normalmargin}
+\setlength\leftmargini{.6\beamer@fancy@normalmargin}
+\setlength\leftmarginii{.6\beamer@fancy@normalmargin}
+\setlength\leftmarginiii{.6\beamer@fancy@normalmargin}
+
+
+\pgfdeclareimage[width=\paperwidth, height=\paperheight]{BSUbackground}{background.pdf}
+\pgfdeclareimage[height=.15\paperheight]{BSUlogo}{logo.pdf}
+
+\defbeamertemplate*{title page}{fancy}[1][]
+{
+  \begin{picture}(\paperwidth,\paperheight)
+  
+    \put(-1in-\oddsidemargin,-1in-\topmargin){%
+      \pgfuseimage{BSUbackground}      
+    }
+
+    \put(-1in-\oddsidemargin+.03\paperwidth,.81\paperheight){%
+      \pgfuseimage{BSUlogo}      
+    }
+
+    %Title
+    \put(-1in-\oddsidemargin+.05\paperwidth,.3\paperheight){%
+    \begin{beamercolorbox}[wd=0.8\paperwidth,ht=.45\paperheight]{author}
+      \vbox to .45\paperheight{
+        \vfil 
+        {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
+        \ifx\insertsubtitle\@empty%
+        \else%
+          \vskip0.55em%
+          {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+        \fi%
+        \vfil
+      }  
+    \end{beamercolorbox}
+    }
+
+    %Author, Institution, Date
+    \put(-1in-\oddsidemargin+.05\paperwidth,.1\paperheight){%
+    \begin{beamercolorbox}[wd=0.8\paperwidth,ht=.2\paperheight]{author}
+        \usebeamerfont{author}\usebeamercolor[fg]{subtitle}\insertauthor\par
+        \usebeamerfont{institute}\usebeamercolor[fg]{subtitle}\insertinstitute\par
+        \usebeamerfont{date}\usebeamercolor[fg]{subtitle}\insertdate
+    \end{beamercolorbox}      
+    }  
+
+  \end{picture}
+}
+
+\mode<all>
+
