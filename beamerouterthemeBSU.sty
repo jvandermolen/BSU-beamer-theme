@@ -46,9 +46,9 @@
 % Header
 \defbeamertemplate*{frametitle}{mrc theme}[1][left]
 {
-  \nointerlineskip
+  \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
   \vbox{}\vskip-.25em%
-  \begin{beamercolorbox}[sep=\beamer@leftmargin,wd=\paperwidth]{frametitleback}
+  \begin{beamercolorbox}[sep=\beamer@leftmargin,wd=\paperwidth]{frametitle}
     \usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}%
     \vskip-1.2ex
     \if@tempswa\else\csname beamer@fte#1\endcsname\fi%
