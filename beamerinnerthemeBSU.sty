@@ -13,7 +13,7 @@
 
 \setbeamerfont{author}{size=\Large, family={\fontfamily{phv}}}
 \setbeamerfont{institute}{size=\normalsize, family={\fontfamily{phv}}}
-\setbeamerfont{title}{size=\fontsize{24}{28}\bfseries, family={\fontfamily{phv}}}
+\setbeamerfont{title}{size=\huge\bfseries, family={\fontfamily{phv}}}
 \setbeamerfont{subtitle}{size=\Large\normalfont, family={\fontfamily{phv}}}
 \setbeamerfont{heading}{size=\Large\bfseries, family={\fontfamily{phv}}}
 
@@ -36,7 +36,7 @@
 
 
 \pgfdeclareimage[width=\paperwidth, height=\paperheight]{BSUbackground}{background.pdf}
-\pgfdeclareimage[height=.15\paperheight]{BSUlogo}{logo.pdf}
+\pgfdeclareimage[width=.64216\paperwidth]{BSUlogo}{logo.pdf}
 
 \defbeamertemplate*{title page}{fancy}[1][]
 {
@@ -46,7 +46,7 @@
       \pgfuseimage{BSUbackground}      
     }
 
-    \put(-1in-\oddsidemargin+.03\paperwidth,.81\paperheight){%
+    \put(-1in-\oddsidemargin+.035\paperwidth,.794\paperheight){%
       \pgfuseimage{BSUlogo}      
     }
 
@@ -80,8 +80,8 @@
 
 %Custom frames for questions and thanks
 \pgfdeclareimage[width=\paperwidth, height=\paperheight]{BSUbackground2}{background2.png}
-\pgfdeclareimage[width=.65\paperwidth]{BSUpattern2}{pattern2.png}
-\pgfdeclareimage[width=.65\paperwidth]{BSUquestions}{questions.png}
+\pgfdeclareimage[height=\paperheight]{BSUpattern2}{pattern2.png}
+\pgfdeclareimage[width=.649\paperwidth]{BSUquestions}{questions.png}
 \newcommand{\questionspage}{%
   \begin{picture}(\paperwidth,\paperheight)
     
@@ -89,15 +89,15 @@
       \pgfuseimage{BSUbackground2}      
     }
 
-    \put(-1in-\oddsidemargin+.03\paperwidth,.81\paperheight){%
+    \put(-1in-\oddsidemargin+.035\paperwidth,.794\paperheight){%
       \pgfuseimage{BSUlogo}      
     }
 
-    \put(-1in-\oddsidemargin+.35\paperwidth,0){%
+    \put(-1in-\oddsidemargin+.434\paperwidth,0){%
     \pgfuseimage{BSUpattern2}
     }
 
-    \put(-1in-\oddsidemargin+.075\paperwidth,.35\paperheight){%
+    \put(-1in-\oddsidemargin+.081\paperwidth,.3556\paperheight){%
     \pgfuseimage{BSUquestions}
     }
 
@@ -105,7 +105,7 @@
 }
 
 \pgfdeclareimage[width=\paperwidth, height=\paperheight]{BSUbackground3}{background3.png}
-\pgfdeclareimage[width=.65\paperwidth]{BSUthankyou}{thankyou.png}
+\pgfdeclareimage[width=.6198\paperwidth]{BSUthankyou}{thankyou.png}
 \pgfdeclareimage[height=1em]{twitterlogo}{twitterlogo.png}
 \newcommand{\thankyoupage}{%
   \begin{picture}(\paperwidth,\paperheight)
@@ -114,11 +114,11 @@
       \pgfuseimage{BSUbackground3}      
     }
 
-    \put(-1in-\oddsidemargin+.03\paperwidth,.81\paperheight){%
+    \put(-1in-\oddsidemargin+.035\paperwidth,.794\paperheight){%
       \pgfuseimage{BSUlogo}      
     }
 
-    \put(-1in-\oddsidemargin+.075\paperwidth,.35\paperheight){%
+    \put(-1in-\oddsidemargin+.11024\paperwidth,.3814\paperheight){%
       \pgfuseimage{BSUthankyou}
     }
 
