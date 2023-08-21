@@ -25,11 +25,6 @@
   \par\smallskip
 }
 
-% Colors.
-
-\setbeamercolor*{title page header}{parent=palette tertiary}
-
-
 % Margins.
 \newlength{\beamer@fancy@normalmargin}
 \setlength{\beamer@fancy@normalmargin}{.06\paperwidth}
@@ -82,6 +77,65 @@
 
   \end{picture}
 }
+
+%Custom frames for questions and thanks
+\pgfdeclareimage[width=\paperwidth, height=\paperheight]{BSUbackground2}{background2.png}
+\pgfdeclareimage[width=.65\paperwidth]{BSUpattern2}{pattern2.png}
+\pgfdeclareimage[width=.65\paperwidth]{BSUquestions}{questions.png}
+\newcommand{\questionspage}{%
+  \begin{picture}(\paperwidth,\paperheight)
+    
+    \put(-1in-\oddsidemargin,-1in-\topmargin){%
+      \pgfuseimage{BSUbackground2}      
+    }
+
+    \put(-1in-\oddsidemargin+.03\paperwidth,.81\paperheight){%
+      \pgfuseimage{BSUlogo}      
+    }
+
+    \put(-1in-\oddsidemargin+.35\paperwidth,0){%
+    \pgfuseimage{BSUpattern2}
+    }
+
+    \put(-1in-\oddsidemargin+.075\paperwidth,.35\paperheight){%
+    \pgfuseimage{BSUquestions}
+    }
+
+  \end{picture}  
+}
+
+\pgfdeclareimage[width=\paperwidth, height=\paperheight]{BSUbackground3}{background3.png}
+\pgfdeclareimage[width=.65\paperwidth]{BSUthankyou}{thankyou.png}
+\pgfdeclareimage[height=1em]{twitterlogo}{twitterlogo.png}
+\newcommand{\thankyoupage}{%
+  \begin{picture}(\paperwidth,\paperheight)
+    
+    \put(-1in-\oddsidemargin,-1in-\topmargin){%
+      \pgfuseimage{BSUbackground3}      
+    }
+
+    \put(-1in-\oddsidemargin+.03\paperwidth,.81\paperheight){%
+      \pgfuseimage{BSUlogo}      
+    }
+
+    \put(-1in-\oddsidemargin+.075\paperwidth,.35\paperheight){%
+      \pgfuseimage{BSUthankyou}
+    }
+
+    \put(-1in-\oddsidemargin+.02\paperwidth,.075\paperheight){%
+      {
+        \leavevmode%
+        \hbox{
+          \begin{beamercolorbox}[wd=0.9\paperwidth,ht=.1\paperheight]{footer}
+            {MRC Biostatistics Unit \hfil \pgfuseimage{twitterlogo}@MRC\_BSU \hfil mrc-bsu.cam.ac.uk}
+          \end{beamercolorbox}
+        }
+      }
+    }
+
+  \end{picture}
+}
+
 
 \mode<all>
 

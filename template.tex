@@ -6,17 +6,17 @@
 % 2. under GPLv3.
 
 \documentclass{beamer}
+%\documentclass[aspectratio=169]{beamer} %use this option to obtain the powerpoint aspect ratio
 \usetheme[pageofpages=of,% String used between the current page and the total page count.
   ]{BSU}
 
-\usepackage[]{colortbl}
 \usepackage{pgf,tikz}
 
 \usepackage{graphicx}
 \graphicspath{{./figs/}}
 \usepackage{appendixnumberbeamer}
 
-\author[]{Name Last Name}
+\author[]{Name Lastname}
 \title[]{Presentation introduction}
 \subtitle[]{Presentation introduction subheading}
 \institute{MRC Biostatistics Unit}
@@ -33,8 +33,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\begin{frame}[t]%{Copy Only}
-  \frametitle[right]{Copy Only}
+\begin{frame}[t]{Copy Only}
     % [t] option vertically aligns the text at the top
     % and it makes it look more like the PowerPoint template.
     % When removed the text is centred.
@@ -99,63 +98,15 @@
       Quisque sagittis purus sit amet volutpat consequat mauris      
     \end{alertblock}
   \end{frame}
-
-
-  \pgfdeclareimage[width=\paperwidth, height=\paperheight]{BSUbackground2}{background2.png}
-  \pgfdeclareimage[width=.65\paperwidth]{BSUpattern2}{pattern2.png}
-  \pgfdeclareimage[width=.65\paperwidth]{BSUquestions}{questions.png}
-  \begin{frame}[plain]
-    \begin{picture}(\paperwidth,\paperheight)
   
-        \put(-1in-\oddsidemargin,-1in-\topmargin){%
-          \pgfuseimage{BSUbackground2}      
-        }
-    
-        \put(-1in-\oddsidemargin+.03\paperwidth,.81\paperheight){%
-          \pgfuseimage{BSUlogo}      
-        }
-
-        \put(-1in-\oddsidemargin+.35\paperwidth,0){%
-        \pgfuseimage{BSUpattern2}
-        }
-    
-        \put(-1in-\oddsidemargin+.075\paperwidth,.35\paperheight){%
-        \pgfuseimage{BSUquestions}
-        }
-
-    \end{picture}  
+  %the commands \questionspage and \thankyoupage inside a plain frame add
+  %the questions and thank you slides from the template
+  \begin{frame}[plain]
+    \questionspage
   \end{frame}
 
-  \pgfdeclareimage[width=\paperwidth, height=\paperheight]{BSUbackground3}{background3.png}
-  \pgfdeclareimage[width=.65\paperwidth]{BSUthankyou}{thankyou.png}
-  \pgfdeclareimage[height=1em]{twitterlogo}{twitterlogo.png}
   \begin{frame}[plain]
-    \begin{picture}(\paperwidth,\paperheight)
-  
-        \put(-1in-\oddsidemargin,-1in-\topmargin){%
-          \pgfuseimage{BSUbackground3}      
-        }
-    
-        \put(-1in-\oddsidemargin+.03\paperwidth,.81\paperheight){%
-          \pgfuseimage{BSUlogo}      
-        }
-    
-        \put(-1in-\oddsidemargin+.075\paperwidth,.35\paperheight){%
-          \pgfuseimage{BSUthankyou}
-        }
-
-        \put(-1in-\oddsidemargin+.02\paperwidth,.075\paperheight){%
-          {
-            \leavevmode%
-            \hbox{
-              \begin{beamercolorbox}[wd=0.9\paperwidth,ht=.1\paperheight]{footer}
-                {MRC Biostatistics Unit \hfil \pgfuseimage{twitterlogo}@MRC\_BSU \hfil mrc-bsu.cam.ac.uk}
-              \end{beamercolorbox}
-            }
-          }
-        }
-
-    \end{picture}  
+    \thankyoupage
   \end{frame}
 
 \end{document}
